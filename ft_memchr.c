@@ -6,7 +6,7 @@
 /*   By: lebarbos <lebarbos@student.42porto.com     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/19 14:05:45 by lebarbos          #+#    #+#             */
-/*   Updated: 2023/04/20 15:38:37 by lebarbos         ###   ########.fr       */
+/*   Updated: 2023/04/20 18:10:53 by lebarbos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,3 +34,23 @@ void	*ft_memchr(const void *s, int c, size_t n)
 	}
 	return (NULL);
 }
+
+/*#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include "libft.h"
+
+int main(void)
+{
+	char *str = "Hello, world!";
+	char *ptr;
+
+	ptr = ft_memchr(str, 'w', strlen(str));
+	if (ptr != NULL)
+		printf("Valor encontrado: %c\n", *ptr);
+	else
+		printf("Valor nao encontrado.\n");
+
+	return (0);
+}
+*/

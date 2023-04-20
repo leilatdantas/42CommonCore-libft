@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*   ft_memcpy2.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lebarbos <lebarbos@student.42porto.com     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/13 15:18:50 by lebarbos          #+#    #+#             */
-/*   Updated: 2023/04/20 18:17:02 by lebarbos         ###   ########.fr       */
+/*   Updated: 2023/04/20 18:40:57 by lebarbos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,16 +35,21 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 	return ((void *)dest);
 }
 
+
 #include "libft.h"
 #include <stdio.h>
 
 int	main(void)
 {
-	char src[] = "Hello World!";
-	char dest[20];
+	int src[] = {1, 2, 3, 4, 5};
+	int dest[5];
+	//size_t n = sizeof(src);
 	
-	ft_memcpy(dest, src, 13);
-	printf("Destino: %s\n", dest);
-	
+	ft_memcpy(dest, src, 20);
+	for (size_t i = 0; i < 5; i++)
+	{
+		//printf("TAmanho em bytes de src: %zu\n", n);
+		printf("%zu : %d\n", i, dest[i]);
+	}
 	return (0);
 }
