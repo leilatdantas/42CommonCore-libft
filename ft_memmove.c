@@ -21,14 +21,16 @@
 void	*ft_memmove(void *dest, const void *src, size_t n)
 {
 	unsigned char		*d;
-	unsigned const char	*s;
+	const unsigned char	*s;
 	unsigned char		*temp;
-	int					i;
+	size_t				i;
 
 	d = dest;
 	s = src;
 	temp = (unsigned char *)malloc(n);
 	i = 0;
+	if (temp == NULL)
+		return (NULL);
 	while (i < n)
 	{
 		temp[i] = s[i];
@@ -43,18 +45,23 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 	free (temp);
 	return (dest);
 }
+
 /*#include <stdio.h>
-int	main(void)
+#include <string.h>
+#include <stdlib.h>
+
+void	*ft_memmove(void *dest, const void *src, size_t n);
+
+int main(void)
 {
-	char dest[] = "teste";
-	char src[] = "casas";
-	int len = 2;
+    char src[] = "hello world";
+    char dest[20];
 
-	printf("Before: \ndest = %s\nsrc = %s\n", dest, src);
+    printf("Before memmove dest = %s, src = %s\n", dest, src);
 
-	memmove(dest, src, len);
+    ft_memmove(dest, src, strlen(src) + 1);
 
-	printf("After: \ndest = %s\nsrc = %s\n", dest, src);
+    printf("After memmove dest = %s, src = %s\n", dest, src);
 
-	return 0;
+    return 0;
 }*/

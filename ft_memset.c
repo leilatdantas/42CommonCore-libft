@@ -26,6 +26,7 @@ void	*ft_memset(void *s, int c, size_t n)
 
 	ptr = s;
 	i = 0;
+	b = (unsigned char) c;
 	while (i < n)
 	{
 		ptr[i] = b;
@@ -33,3 +34,29 @@ void	*ft_memset(void *s, int c, size_t n)
 	}
 	return ((void *)s);
 }
+
+/*
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include "libft.h"
+
+int	main(void)
+{
+	char	str[10];
+	void	*ptr;
+
+	memset(str, 'A', sizeof(str));
+	printf("memset: %s\n", str);
+
+	ptr = ft_memset(str, 'B', sizeof(str));
+	if (ptr == NULL)
+	{
+		printf("Erro: alocação de memória falhou\n");
+		return (EXIT_FAILURE);
+	}
+	printf("ft_memset: %s\n", str);
+
+	return (EXIT_SUCCESS);
+}
+*/

@@ -35,7 +35,7 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 	return ((void *)dest);
 }
 
-#include "libft.h"
+/*#include "libft.h"
 #include <stdio.h>
 
 int	main(void)
@@ -47,4 +47,4 @@ int	main(void)
 	printf("Destino: %s\n", dest);
 	
 	return (0);
-}
+}*/
