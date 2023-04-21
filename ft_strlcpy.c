@@ -6,7 +6,7 @@
 /*   By: lebarbos <lebarbos@student.42porto.com     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/12 11:23:08 by lebarbos          #+#    #+#             */
-/*   Updated: 2023/04/18 17:31:21 by lebarbos         ###   ########.fr       */
+/*   Updated: 2023/04/21 14:29:32 by lebarbos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,8 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 
 	i = 0;
 	srclen = ft_strlen(src);
+	if (size == 0)
+		return (srclen);
 	cpylen = size - 1;
 	if (srclen < cpylen)
 		cpylen = srclen;

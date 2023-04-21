@@ -6,7 +6,7 @@
 /*   By: lebarbos <lebarbos@student.42porto.com     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/19 14:27:44 by lebarbos          #+#    #+#             */
-/*   Updated: 2023/04/19 15:26:20 by lebarbos         ###   ########.fr       */
+/*   Updated: 2023/04/21 16:09:49 by lebarbos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,15 +22,43 @@
 
 char	*ft_strnstr(const char *big, const char *little, size_t len)
 {
-	size_t	littlelen;
+	size_t	i;
+	size_t	j;
 
-	littlelen = ft_strlen(little);
-	if (littlelen == 0)
+	if (little[0] == '\0')
 		return ((char *) big);
-	while (*big != '\0' && len >= littlelen)
+	i = 0;
+	while (big[i] != '\0' && i < len)
 	{
-		if (*big == *little && ft_strncmp(big, little, littlelen) == 0)
-			return ((char *)big);
+		j = 0;
+		while ((i + j) < len && big[i + j] == little[j])
+		{
+			j++;
+			if (little[j] == '\0')
+				return ((char *)(big + i));
+		}
+		i++;
 	}
 	return (NULL);
 }
+
+/*#include "libft.h"
+#include <stdio.h>
+
+int main(void)
+{
+    const char *str1 = "O rato roeu a roupa do rei de Roma";
+    const char *str2 = "rei";
+    char *result = ft_strnstr(str1, str2, 30);
+    if (result != NULL)
+    {
+        printf("'%s' encontrado em '%s'\n", str2, str1);
+        printf("Posição: %ld\n", result - str1);
+    }
+    else
+    {
+        printf("'%s' não encontrado em '%s'\n", str2, str1);
+    }
+    return 0;
+}
+*/
