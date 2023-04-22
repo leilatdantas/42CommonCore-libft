@@ -6,7 +6,7 @@
 /*   By: lebarbos <lebarbos@student.42porto.com     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/17 12:46:53 by lebarbos          #+#    #+#             */
-/*   Updated: 2023/04/21 16:14:18 by lebarbos         ###   ########.fr       */
+/*   Updated: 2023/04/22 12:58:36 by lebarbos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,6 +40,7 @@ char	*ft_strchr(const char *s, int c);
 char	*ft_strrchr(const char *s, int c);
 char	*ft_strnstr(const char *big, const char *little, size_t len);
 char	*ft_strdup(const char *s);
-char    *ft_substr(char const *s, unsigned int star, size_t len);
+char	*ft_substr(char const *s, unsigned int star, size_t len);
+char	*ft_strjoin(char const *s1, char const *s2);
 
 #endif
