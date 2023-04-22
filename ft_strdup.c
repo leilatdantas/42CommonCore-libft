@@ -6,7 +6,7 @@
 /*   By: lebarbos <lebarbos@student.42porto.com     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/19 15:02:00 by lebarbos          #+#    #+#             */
-/*   Updated: 2023/04/21 14:19:59 by lebarbos         ###   ########.fr       */
+/*   Updated: 2023/04/22 15:14:30 by lebarbos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ char	*ft_strdup(const char *s)
 	int		i;
 
 	i = 0;
-	dup = (char *)malloc(sizeof(char) * (ft_strlen(s) + 1));
+	dup = malloc(sizeof(char) * (ft_strlen(s) + 1));
 	if (dup == NULL)
 		return (NULL);
 	while (s[i])
