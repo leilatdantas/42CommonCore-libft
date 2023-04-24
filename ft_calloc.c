@@ -6,13 +6,13 @@
 /*   By: lebarbos <lebarbos@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/19 14:54:46 by lebarbos          #+#    #+#             */
-/*   Updated: 2023/04/24 12:02:11 by lebarbos         ###   ########.fr       */
+/*   Updated: 2023/04/24 14:03:50 by lebarbos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 /*  LIBRARY: <stdlib.h>
-**  DEF: Allocates memory for an array of nmemb elements of size bytes each The allocated 
-**	memory is filled with bytes of value zero.
+**  DEF: Allocates memory for an array of nmemb elements of size bytes each The 
+** allocated memory is filled with bytes of value zero.
 **  RETURN VALUE: A pointer to the allocated memory.
 */
 
