@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lebarbos <lebarbos@student.42porto.com     +#+  +:+       +#+        */
+/*   By: lebarbos <lebarbos@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/24 14:16:16 by lebarbos          #+#    #+#             */
-/*   Updated: 2023/04/24 16:06:46 by lebarbos         ###   ########.fr       */
+/*   Updated: 2023/04/24 19:53:23 by lebarbos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,18 +17,19 @@
 */
 
 #include "libft.h"
+#include <stdio.h>
 
-static int	countsize(int nbr)
+static int	ft_countsize(int nbr)
 {
 	int	size;
 
-	size = 0;
+	size = 1;
 	if (nbr < 0)
 	{
-		nbr = -nbr;
 		size++;
+		nbr = -nbr;
 	}
-	while (nbr > 0)
+	while (nbr / 10 > 0)
 	{
 		size++;
 		nbr = nbr / 10;
@@ -36,29 +37,27 @@ static int	countsize(int nbr)
 	return (size);
 }
 
-static char	*ft_putnbr(int n, char *str, int size)
+static void	ft_putnstr(int n, char *str, int size)
 {
-	int	i;
+	int	check;
 
-	i = size - 1;
-	if (n == 0)
-	{
-		str[0] = '0';
-		str[1] = '\0';
-	}
-	if (n < 0)
-	{
-		str[0] = '-';
-		n = -n;
-	}
-	while (n > 0)
-	{
-		str[i] = (n % 10) + '0';
-		n = n / 10;
-		i--;
-	}
+	check = 0;
 	str[size] = '\0';
-	return (str);
+	while (size > check)
+	{
+		if (n < 0)
+		{
+			str[0] = '-';
+			n = -n;
+			check++;
+		}
+		else
+		{
+			str[size - 1] = (n % 10) + '0';
+			n = n / 10;
+			size--;
+		}
+	}
 }
 
 char	*ft_itoa(int n)
@@ -66,13 +65,13 @@ char	*ft_itoa(int n)
 	char	*str;
 	int		size;
 
+	size = ft_countsize(n);
 	if (n == -2147483648)
 		return (ft_strdup("-2147483648"));
-	size = countsize(n);
-	str = malloc(sizeof(char *) * (size + 1));
+	str = (char *)malloc(sizeof(char) * (size + 1));
 	if (str == NULL)
 		return (NULL);
-	str = ft_putnbr(n, str, size);
+	ft_putnstr(n, str, size);
 	return (str);
 }
 
@@ -80,10 +79,9 @@ char	*ft_itoa(int n)
 #include <stdio.h>
 
 int main(void) {
-    int num = -2147483648;
+    int num = 2147483647;
     char *str_num = ft_itoa(num);
     printf("O número %d em string é: %s\n", num, str_num);
     free(str_num);
     return 0;
-}
-*/
+}*/
