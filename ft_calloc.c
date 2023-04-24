@@ -6,7 +6,7 @@
 /*   By: lebarbos <lebarbos@student.42porto.com     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/19 14:54:46 by lebarbos          #+#    #+#             */
-/*   Updated: 2023/04/20 17:48:59 by lebarbos         ###   ########.fr       */
+/*   Updated: 2023/04/24 09:22:51 by lebarbos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,53 +26,36 @@ void	*ft_calloc(size_t nmemb, size_t size)
 		return (NULL);
 	ptr = malloc(nmemb * size);
 	i = 0;
-	if (ptr != NULL)
+	if (ptr == NULL)
+		return (NULL);
+	while (i < nmemb * size)
 	{
-		while (i < nmemb * size)
-		{
 		*(ptr + i) = 0;
 		i++;
-		}
 	}
 	return ((void *)ptr);
 }
 
 /*#include "libft.h"
 #include <stdio.h>
-#include <string.h>
 
-int	main(void)
+int main()
 {
-	char *str;
-	int	i = 0;
+    int *ptr = ft_calloc(10, 0);
 
-	// Aloca uma string com 10 caracteres
-	str = (char *)ft_calloc(10, sizeof(char));
+    if (ptr == NULL)
+    {
+        printf("Erro na alocação de memória\n");
+        return 1;
+    }
 
-	// Verifica se a alocação foi bem sucedida
-	if (str == NULL)
-	{
-		printf("Erro ao alocar memória\n");
-		return (1);
-	}
-	while (i < 10)
-	{
-		if (str[i] == '\0')
-			printf("%d: 0\n", i);
-		else
-			printf("%d: %c\n", i, str[i]);
-		i++;
-	}
-	
-	// Copia uma mensagem para a string
-	strcpy(str, "Hello!");
+    for (int i = 0; i < 10; i++)
+    {
+        printf("%d ", ptr[i]);
+    }
+    printf("\n");
 
-	// Imprime a mensagem
-	printf("%s\n", str);
-
-	// Libera a memória alocada
-	free(str);
-
-	return (0);
+    free(ptr);
+    return 0;
 }
 */
