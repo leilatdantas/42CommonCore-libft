@@ -6,7 +6,7 @@
 /*   By: lebarbos <lebarbos@student.42porto.com     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/22 11:20:48 by lebarbos          #+#    #+#             */
-/*   Updated: 2023/04/22 15:41:30 by lebarbos         ###   ########.fr       */
+/*   Updated: 2023/04/26 10:23:30 by lebarbos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	size_t	j;
 	char	*newstring;
 
-	newstring = malloc(sizeof(char) * len + 1);
+	newstring = malloc(sizeof(char) * (len + 1));
 	if (!newstring || !s)
 		return (NULL);
 	i = start;

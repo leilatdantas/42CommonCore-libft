@@ -6,7 +6,7 @@
 /*   By: lebarbos <lebarbos@student.42porto.com     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/13 15:49:36 by lebarbos          #+#    #+#             */
-/*   Updated: 2023/04/21 15:28:26 by lebarbos         ###   ########.fr       */
+/*   Updated: 2023/04/26 10:16:47 by lebarbos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,18 +21,20 @@
 
 char	*ft_strrchr(const char *s, int c)
 {
-	int			i;
-	const char	*last;
+	unsigned int	i;
+	const char		*last;
+	unsigned char	a;
 
 	last = NULL;
 	i = 0;
+	a = c;
 	while (s[i] != '\0')
 	{
-		if (s[i] == c)
+		if (s[i] == a)
 			last = s + i;
 		i++;
 	}
-	if (c == '\0')
+	if (a == '\0')
 		return ((char *)(s + i));
 	return ((char *)(last));
 }

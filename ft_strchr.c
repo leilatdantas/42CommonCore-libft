@@ -6,7 +6,7 @@
 /*   By: lebarbos <lebarbos@student.42porto.com     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/13 15:49:36 by lebarbos          #+#    #+#             */
-/*   Updated: 2023/04/19 14:41:32 by lebarbos         ###   ########.fr       */
+/*   Updated: 2023/04/26 10:14:31 by lebarbos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,17 +21,14 @@
 
 char	*ft_strchr(const char *s, int c)
 {
-	int	i;
+	unsigned int	i;
+	unsigned char	a;
 
+	a = c;
 	i = 0;
-	while (s[i] != c && s[i] != '\0')
+	while (s[i] != a && s[i])
 		i++;
-	if (s[i] == '\0')
-	{
-		if (c != '\0')
-			return (NULL);
-		else
-			return ((char *)(s + i));
-	}
-	return ((char *)(s + i));
+	if (a == s[i])
+		return ((char *)(s + i));
+	return (NULL);
 }
