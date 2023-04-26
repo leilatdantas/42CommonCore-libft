@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_calloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lebarbos <lebarbos@student.42porto.com>    +#+  +:+       +#+        */
+/*   By: lebarbos <lebarbos@student.42porto.com     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/19 14:54:46 by lebarbos          #+#    #+#             */
-/*   Updated: 2023/04/24 14:03:50 by lebarbos         ###   ########.fr       */
+/*   Updated: 2023/04/26 12:55:33 by lebarbos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,27 +34,3 @@ void	*ft_calloc(size_t nmemb, size_t size)
 	}
 	return ((void *)ptr);
 }
-
-/*#include "libft.h"
-#include <stdio.h>
-
-int main()
-{
-    int *ptr = ft_calloc(10, 0);
-
-    if (ptr == NULL)
-    {
-        printf("Erro na alocação de memória\n");
-        return 1;
-    }
-
-    for (int i = 0; i < 10; i++)
-    {
-        printf("%d ", ptr[i]);
-    }
-    printf("\n");
-
-    free(ptr);
-    return 0;
-}
-*/

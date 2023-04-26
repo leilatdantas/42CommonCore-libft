@@ -6,7 +6,7 @@
 /*   By: lebarbos <lebarbos@student.42porto.com     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/22 11:45:02 by lebarbos          #+#    #+#             */
-/*   Updated: 2023/04/22 12:57:19 by lebarbos         ###   ########.fr       */
+/*   Updated: 2023/04/26 12:56:32 by lebarbos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,22 +41,3 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	newstring[i + j] = '\0';
 	return (newstring);
 }
-
-/*#include <stdio.h>
-#include "libft.h"
-
-int main(void)
-{
-    char *str1 = "Hello ";
-    char *str2 = "World";
-    char *result = ft_strjoin(str1, str2);
-    if (result == NULL)
-    {
-        printf("ft_strjoin returned NULL.\n");
-        return (1);
-    }
-    printf("%s\n", result);
-    free(result);
-    return (0);
-}
-*/

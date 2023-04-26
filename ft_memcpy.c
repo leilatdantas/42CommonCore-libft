@@ -6,7 +6,7 @@
 /*   By: lebarbos <lebarbos@student.42porto.com     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/13 15:18:50 by lebarbos          #+#    #+#             */
-/*   Updated: 2023/04/20 18:17:02 by lebarbos         ###   ########.fr       */
+/*   Updated: 2023/04/26 12:14:42 by lebarbos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,8 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 	i = 0;
 	ptr = dest;
 	src1 = src;
+	if (!dest && !src)
+		return (NULL);
 	while (i < n)
 	{
 		ptr[i] = src1[i];
@@ -34,17 +36,3 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 	}
 	return ((void *)dest);
 }
-
-/*#include "libft.h"
-#include <stdio.h>
-
-int	main(void)
-{
-	char src[] = "Hello World!";
-	char dest[20];
-	
-	ft_memcpy(dest, src, 13);
-	printf("Destino: %s\n", dest);
-	
-	return (0);
-}*/

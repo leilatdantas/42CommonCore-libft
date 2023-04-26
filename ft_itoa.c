@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lebarbos <lebarbos@student.42porto.com>    +#+  +:+       +#+        */
+/*   By: lebarbos <lebarbos@student.42porto.com     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/24 14:16:16 by lebarbos          #+#    #+#             */
-/*   Updated: 2023/04/24 19:53:23 by lebarbos         ###   ########.fr       */
+/*   Updated: 2023/04/26 12:55:49 by lebarbos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -74,14 +74,3 @@ char	*ft_itoa(int n)
 	ft_putnstr(n, str, size);
 	return (str);
 }
-
-/*#include "libft.h"
-#include <stdio.h>
-
-int main(void) {
-    int num = 2147483647;
-    char *str_num = ft_itoa(num);
-    printf("O número %d em string é: %s\n", num, str_num);
-    free(str_num);
-    return 0;
-}*/

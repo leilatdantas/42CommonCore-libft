@@ -6,7 +6,7 @@
 /*   By: lebarbos <lebarbos@student.42porto.com     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/13 13:03:16 by lebarbos          #+#    #+#             */
-/*   Updated: 2023/04/20 16:30:23 by lebarbos         ###   ########.fr       */
+/*   Updated: 2023/04/26 12:55:25 by lebarbos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,19 +31,3 @@ void	ft_bzero(void *s, size_t n)
 		i++;
 	}
 }
-
-/*#include <stdio.h>
-
-int main()
-{
-    char str[10] = "aaaaaaaaaa";
-
-    // preenche str com caracteres aleatórios
-    printf("antes: %s\n", str);
-
-    // preenche os primeiros 5 bytes com zeros usando ft_bzero
-    ft_bzero(str, 5);
-    printf("depois: %s\n", str);
-
-    return 0;
-}*/

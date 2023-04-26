@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lebarbos <lebarbos@student.42porto.com>    +#+  +:+       +#+        */
+/*   By: lebarbos <lebarbos@student.42porto.com     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/24 10:37:02 by lebarbos          #+#    #+#             */
-/*   Updated: 2023/04/24 14:02:53 by lebarbos         ###   ########.fr       */
+/*   Updated: 2023/04/26 12:56:22 by lebarbos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,7 +46,7 @@ static char	*ft_strndup(const char *s, size_t len)
 	size_t		i;
 
 	i = 0;
-	dup = malloc(sizeof(char) * (ft_strlen(s) + 1));
+	dup = malloc(sizeof(char) * (len + 1));
 	if (dup == NULL)
 		return (NULL);
 	while (i < len)
@@ -60,16 +60,16 @@ static char	*ft_strndup(const char *s, size_t len)
 
 char	**ft_split(char const *s, char c)
 {
-	unsigned int	index;
-	unsigned int	words;
-	size_t			j;
-	size_t			wordlen;
-	char			**array;
+	size_t	index;
+	size_t	words;
+	size_t	j;
+	size_t	wordlen;
+	char	**array;
 
 	index = 0;
 	j = 0;
 	words = ft_countword(s, c);
-	array = malloc((words + 1) * sizeof(char *));
+	array = ft_calloc((words + 1), sizeof(char *));
 	if (!s || !(array))
 		return (NULL);
 	while (index < words)
@@ -86,20 +86,3 @@ char	**ft_split(char const *s, char c)
 	array[index] = NULL;
 	return (array);
 }
-
-/*#include "libft.h"
-#include <stdio.h>
-
-int main() {
-    char s[] = "Esta e uma string de exemplo";
-    char c = ' ';
-    char** substrings = ft_split(s, c);
-    int i = 0;
-    while (substrings[i] != NULL) {
-        printf("%s\n", substrings[i]);
-        free(substrings[i]);
-        i++;
-    }
-    free(substrings);
-    return 0;
-}*/

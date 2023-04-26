@@ -6,7 +6,7 @@
 /*   By: lebarbos <lebarbos@student.42porto.com     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/18 14:44:19 by lebarbos          #+#    #+#             */
-/*   Updated: 2023/04/19 14:37:23 by lebarbos         ###   ########.fr       */
+/*   Updated: 2023/04/26 12:56:05 by lebarbos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,46 +22,24 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 {
 	unsigned char		*d;
 	const unsigned char	*s;
-	unsigned char		*temp;
-	size_t				i;
 
 	d = dest;
 	s = src;
-	temp = (unsigned char *)malloc(n);
-	i = 0;
-	if (temp == NULL)
+	if (!dest && !src)
 		return (NULL);
-	while (i < n)
+	if (d == s)
+		return (dest);
+	if (d > s)
 	{
-		temp[i] = s[i];
-		i++;
+		s = s + n - 1;
+		d = d + n - 1;
+		while (n--)
+			*d-- = *s--;
 	}
-	i = 0;
-	while (i < n)
+	else
 	{
-		d[i] = temp[i];
-		i++;
+		while (n--)
+			*d++ = *s++;
 	}
-	free (temp);
 	return (dest);
 }
-
-/*#include <stdio.h>
-#include <string.h>
-#include <stdlib.h>
-
-void	*ft_memmove(void *dest, const void *src, size_t n);
-
-int main(void)
-{
-    char src[] = "hello world";
-    char dest[20];
-
-    printf("Before memmove dest = %s, src = %s\n", dest, src);
-
-    ft_memmove(dest, src, strlen(src) + 1);
-
-    printf("After memmove dest = %s, src = %s\n", dest, src);
-
-    return 0;
-}*/

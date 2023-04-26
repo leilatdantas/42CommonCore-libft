@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lebarbos <lebarbos@student.42porto.com>    +#+  +:+       +#+        */
+/*   By: lebarbos <lebarbos@student.42porto.com     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/25 19:17:24 by lebarbos          #+#    #+#             */
-/*   Updated: 2023/04/25 19:59:26 by lebarbos         ###   ########.fr       */
+/*   Updated: 2023/04/26 12:56:16 by lebarbos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,8 +31,3 @@ void	ft_putnbr_fd(int n, int fd)
 		ft_putnbr_fd(nbr / 10, fd);
 	ft_putchar_fd((nbr % 10 + '0'), fd);
 }
-
-/*int main (void)
-{
-	ft_putnbr_fd(2147483647, 1);
-}*/
