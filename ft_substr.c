@@ -6,7 +6,7 @@
 /*   By: lebarbos <lebarbos@student.42porto.com     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/22 11:20:48 by lebarbos          #+#    #+#             */
-/*   Updated: 2023/04/26 10:23:30 by lebarbos         ###   ########.fr       */
+/*   Updated: 2023/04/26 11:01:32 by lebarbos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,31 +20,22 @@
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
 	size_t	i;
-	size_t	j;
 	char	*newstring;
 
+	if (start > ft_strlen(s))
+		return (ft_strdup(""));
+	if (len > ft_strlen(s) - start)
+		len = ft_strlen(s) - start;
 	newstring = malloc(sizeof(char) * (len + 1));
-	if (!newstring || !s)
+	if (!newstring)
 		return (NULL);
-	i = start;
-	j = 0;
-	while (i < ft_strlen(s) && j < len)
+	i = 0;
+	while (i < len)
 	{
-		newstring[j] = s[i];
-		j++;
+		newstring[i] = s[start];
 		i++;
+		start++;
 	}
-	newstring[j] = '\0';
+	newstring[i] = '\0';
 	return (newstring);
 }
-
-/*#include <stdio.h>
-#include "libft.h"
-
-int main(void)
-{
-    char str[] = "Hello, World!";
-    char *sub = ft_substr(str, 7, 5);
-    printf("%s\n", sub);
-    return 0;
-}*/
