@@ -6,7 +6,7 @@
 /*   By: lebarbos <lebarbos@student.42porto.com     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/22 15:07:29 by lebarbos          #+#    #+#             */
-/*   Updated: 2023/04/22 16:05:47 by lebarbos         ###   ########.fr       */
+/*   Updated: 2023/04/26 11:38:48 by lebarbos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ static int	ft_setcmp(char c, char const *set)
 	i = 0;
 	while (set[i] != '\0')
 	{
-		if (set[i] == c)
+		if ((unsigned char)set[i] == (unsigned char)c)
 			return (1);
 		i++;
 	}
@@ -45,25 +45,9 @@ char	*ft_strtrim(char const *s1, char const *set)
 	j = ft_strlen(s1) - 1;
 	while (j > i && ft_setcmp(s1[j], set))
 		j--;
-	if (i == j)
+	if (i > j)
 		trimmed = ft_strdup("");
 	else
 		trimmed = ft_substr(s1, i, j - i + 1);
 	return (trimmed);
 }
-
-/*#include "libft.h"
-#include <stdio.h>
-
-int main()
-{
-	char nulo = '\0';
-    char *s1 = "Hello, world!";
-    char *set = " Hd";
-
-	set[0] = nulo;
-    char *trimmed = ft_strtrim(s1, set);
-    printf("'%s' -> '%s'\n", s1, trimmed);
-    free(trimmed);
-    return 0;
-}*/
