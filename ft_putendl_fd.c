@@ -6,7 +6,7 @@
 /*   By: lebarbos <lebarbos@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/25 18:58:08 by lebarbos          #+#    #+#             */
-/*   Updated: 2023/04/25 19:05:29 by lebarbos         ###   ########.fr       */
+/*   Updated: 2023/04/27 10:30:04 by lebarbos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,9 +19,6 @@
 
 void	ft_putendl_fd(char *s, int fd)
 {
-	int	i;
-
-	i = 0;
 	if (s != NULL)
 	{
 		ft_putstr_fd(s, fd);
