@@ -6,7 +6,7 @@
 /*   By: lebarbos <lebarbos@student.42porto.com     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/17 12:46:53 by lebarbos          #+#    #+#             */
-/*   Updated: 2023/04/27 14:03:49 by lebarbos         ###   ########.fr       */
+/*   Updated: 2023/04/27 15:21:34 by lebarbos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,14 @@
 # include <stddef.h>
 # include <stdlib.h>
 
+typedef struct s_list
+{
+	void			*content;
+	struct s_list	*next;
+}					t_list;
+
 /*
-**  Parte 1 - Functions from libc.
+**  Parte 1 - Functions from libc
 */
 
 int		ft_isalpha(int c);
@@ -59,5 +65,10 @@ void	ft_putchar_fd(char c, int fd);
 void	ft_putstr_fd(char *s, int fd);
 void	ft_putendl_fd(char *s, int fd);
 void	ft_putnbr_fd(int n, int fd);
+
+/*
+** Parte BONUS
+*/
+t_list	*ft_lstnew(void *content);
 
 #endif
