@@ -6,11 +6,12 @@
 /*   By: lebarbos <lebarbos@student.42porto.com     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/24 14:16:16 by lebarbos          #+#    #+#             */
-/*   Updated: 2023/04/26 12:55:49 by lebarbos         ###   ########.fr       */
+/*   Updated: 2023/04/28 10:46:57 by lebarbos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/*  DEF: Allocates (with malloc) and returns a string representing the integer
+/*  
+**	DEF: Allocates (with malloc) and returns a string representing the integer
 **  received as an argument. Negatives numbers must be handled. 
 **  RETURN VALUE: The string representing the integer. NULL if the allocation
 **  fails. 
