@@ -6,11 +6,12 @@
 /*   By: lebarbos <lebarbos@student.42porto.com     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/12 15:39:30 by lebarbos          #+#    #+#             */
-/*   Updated: 2023/04/26 12:55:18 by lebarbos         ###   ########.fr       */
+/*   Updated: 2023/04/28 14:53:53 by lebarbos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/*	LIBRARY: <stdlib.h>
+/*	
+**	LIBRARY: <stdlib.h>
 **	DEF: Converts the inicial portion of the string pointed to by nptr to int.
 **	RETURN VALUE: The converted value. 
 */
@@ -19,12 +20,12 @@
 
 int	ft_atoi(const char *str)
 {
-	int	r;
-	int	s;
+	int	result;
+	int	sign;
 
-	r = 0;
-	s = 1;
-	while (*str == 32 || (*str >= 9 && *str <= 13))
+	result = 0;
+	sign = 1;
+	while (*str == ' ' || (*str >= '\t' && *str <= '\r'))
 	{
 		str++;
 	}
@@ -32,14 +33,14 @@ int	ft_atoi(const char *str)
 	{
 		if (*str == '-')
 		{
-			s = s * (-1);
+			sign = sign * (-1);
 		}
 		str++;
 	}
 	while (*str >= '0' && *str <= '9')
 	{
-		r = r * 10 + (*str - 48);
+		result = result * 10 + (*str - 48);
 		str++;
 	}
-	return (r * s);
+	return (result * sign);
 }

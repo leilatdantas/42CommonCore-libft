@@ -6,7 +6,7 @@
 /*   By: lebarbos <lebarbos@student.42porto.com     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/24 14:16:16 by lebarbos          #+#    #+#             */
-/*   Updated: 2023/04/28 10:46:57 by lebarbos         ###   ########.fr       */
+/*   Updated: 2023/04/28 16:33:44 by lebarbos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,7 +70,7 @@ char	*ft_itoa(int n)
 	if (n == -2147483648)
 		return (ft_strdup("-2147483648"));
 	str = (char *)malloc(sizeof(char) * (size + 1));
-	if (str == NULL)
+	if (!str)
 		return (NULL);
 	ft_putnstr(n, str, size);
 	return (str);

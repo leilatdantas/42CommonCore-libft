@@ -6,7 +6,7 @@
 /*   By: lebarbos <lebarbos@student.42porto.com     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/19 14:54:46 by lebarbos          #+#    #+#             */
-/*   Updated: 2023/04/26 12:55:33 by lebarbos         ###   ########.fr       */
+/*   Updated: 2023/04/28 15:09:09 by lebarbos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,17 +20,11 @@
 
 void	*ft_calloc(size_t nmemb, size_t size)
 {
-	size_t			i;
-	unsigned char	*ptr;
+	void	*ptr;
 
 	ptr = malloc(nmemb * size);
-	i = 0;
-	if (ptr == NULL)
+	if (!ptr)
 		return (NULL);
-	while (i < nmemb * size)
-	{
-		ptr[i] = 0;
-		i++;
-	}
-	return ((void *)ptr);
+	ft_memset(ptr, '\0', nmemb * size);
+	return (ptr);
 }
