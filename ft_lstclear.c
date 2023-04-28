@@ -6,7 +6,7 @@
 /*   By: lebarbos <lebarbos@student.42porto.com     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/28 11:40:19 by lebarbos          #+#    #+#             */
-/*   Updated: 2023/04/28 11:49:46 by lebarbos         ###   ########.fr       */
+/*   Updated: 2023/04/28 11:52:19 by lebarbos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,5 +30,4 @@ void	ft_lstclear(t_list **lst, void (*del)(void*))
 		ft_lstdelone(*lst, del);
 		*lst = aux;
 	}
-	free(*lst);
 }
