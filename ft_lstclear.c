@@ -6,7 +6,7 @@
 /*   By: lebarbos <lebarbos@student.42porto.com     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/28 11:40:19 by lebarbos          #+#    #+#             */
-/*   Updated: 2023/04/28 11:52:19 by lebarbos         ###   ########.fr       */
+/*   Updated: 2023/04/28 16:42:56 by lebarbos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ void	ft_lstclear(t_list **lst, void (*del)(void*))
 {
 	t_list	*aux;
 
-	if (!*lst)
+	if (!*lst || !del)
 		return ;
 	while (*lst)
 	{
