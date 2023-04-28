@@ -6,7 +6,7 @@
 #    By: lebarbos <lebarbos@student.42porto.com     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/04/27 13:31:42 by lebarbos          #+#    #+#              #
-#    Updated: 2023/04/28 10:07:22 by lebarbos         ###   ########.fr        #
+#    Updated: 2023/04/28 10:39:29 by lebarbos         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -30,7 +30,7 @@ SRCS	= ft_isalpha.c ft_isdigit.c ft_isalnum.c ft_isascii.c ft_isprint.c \
 
 OBJS	= $(SRCS:.c=.o)
 
-BONUS_S	= ft_lstnew.c 
+BONUS_S	= ft_lstnew.c ft_lstadd_front.c ft_lstsize.c
 
 BONUS_O	= $(BONUS_S:.c=.o)
 
