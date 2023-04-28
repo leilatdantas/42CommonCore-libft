@@ -6,23 +6,20 @@
 #    By: lebarbos <lebarbos@student.42porto.com     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/04/27 13:31:42 by lebarbos          #+#    #+#              #
-#    Updated: 2023/04/27 14:59:03 by lebarbos         ###   ########.fr        #
+#    Updated: 2023/04/28 10:07:22 by lebarbos         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-CC		= gcc
+CC		= cc
 
 CFLAGS	= -Wall -Wextra -Werror
 
-LIB1	= ar -rcs
-
-LIB2	= ranlib
+LIB		= ar -rcs
 
 RM		= /bin/rm -f
 
 NAME	= libft.a
 
-INCLUDE	= libft.h
 SRCS	= ft_isalpha.c ft_isdigit.c ft_isalnum.c ft_isascii.c ft_isprint.c \
 			ft_toupper.c ft_tolower.c ft_strncmp.c ft_memcmp.c ft_atoi.c \
 			ft_strlen.c ft_strlcpy.c ft_strlcat.c ft_memset.c ft_bzero.c \
@@ -33,17 +30,23 @@ SRCS	= ft_isalpha.c ft_isdigit.c ft_isalnum.c ft_isascii.c ft_isprint.c \
 
 OBJS	= $(SRCS:.c=.o)
 
+BONUS_S	= ft_lstnew.c 
+
+BONUS_O	= $(BONUS_S:.c=.o)
+
 all:		$(NAME)
 
-$(NAME):	$(OBJS) $(INCLUDE)
-			$(LIB1) $(NAME) $(OBJS)
-			$(LIB2) $(NAME)
+$(NAME):	$(OBJS)
+			$(LIB) $(NAME) $(OBJS)
+
+bonus:		$(BONUS_O)
+			$(LIB) $(NAME) $(BONUS_O)
 
 c.o.:
-			$(CC) $(FLAGS) -I$(INCLUDE) -c $< -o $(<:.c=.o)
+			$(CC) $(FLAGS) -c $< -o $(<:.c=.o)
 
 clean:
-			$(RM) $(OBJS)
+			$(RM) $(OBJS) $(BONUS_O)
 
 fclean:		clean
 			$(RM) $(NAME)
