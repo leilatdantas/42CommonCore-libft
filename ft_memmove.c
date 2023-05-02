@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lebarbos <lebarbos@student.42porto.com     +#+  +:+       +#+        */
+/*   By: lebarbos <lebarbos@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/18 14:44:19 by lebarbos          #+#    #+#             */
-/*   Updated: 2023/04/26 12:56:05 by lebarbos         ###   ########.fr       */
+/*   Updated: 2023/05/01 18:24:50 by lebarbos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,26 +20,26 @@
 
 void	*ft_memmove(void *dest, const void *src, size_t n)
 {
-	unsigned char		*d;
-	const unsigned char	*s;
+	unsigned char		*dest_aux;
+	const unsigned char	*src_aux;
 
-	d = dest;
-	s = src;
+	dest_aux = dest;
+	src_aux = src;
 	if (!dest && !src)
 		return (NULL);
-	if (d == s)
+	if (dest_aux == src_aux)
 		return (dest);
-	if (d > s)
+	if (dest_aux > src_aux)
 	{
-		s = s + n - 1;
-		d = d + n - 1;
+		src_aux = src_aux + n - 1;
+		dest_aux = dest_aux + n - 1;
 		while (n--)
-			*d-- = *s--;
+			*dest_aux-- = *src_aux--;
 	}
 	else
 	{
 		while (n--)
-			*d++ = *s++;
+			*dest_aux++ = *src_aux++;
 	}
 	return (dest);
 }

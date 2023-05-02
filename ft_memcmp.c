@@ -3,17 +3,18 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lebarbos <lebarbos@student.42porto.com     +#+  +:+       +#+        */
+/*   By: lebarbos <lebarbos@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/19 14:12:22 by lebarbos          #+#    #+#             */
-/*   Updated: 2023/04/26 12:55:57 by lebarbos         ###   ########.fr       */
+/*   Updated: 2023/05/01 17:49:56 by lebarbos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/*  LIBRARY: <string.h>
-**  DEF: Compares the first n bytes of the memory areas s1 and s2.
-**  RETURN VALUES: An integer less than, equal to, or greater than zero if the
-**  first n bytes of s1 is found. 
+/*  
+LIBRARY: <string.h>
+DEF: Compares the first n bytes of the memory areas s1 and s2.
+RETURN VALUES: An integer less than, equal to, or greater than zero if the
+first n bytes of s1 is found. 
 */
 
 #include "libft.h"
@@ -27,8 +28,6 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 	i = 0;
 	p1 = s1;
 	p2 = s2;
-	if (n == 0)
-		return (0);
 	while (i < n)
 	{
 		if (p1[i] != p2[i])

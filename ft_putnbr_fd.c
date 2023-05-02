@@ -3,15 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lebarbos <lebarbos@student.42porto.com     +#+  +:+       +#+        */
+/*   By: lebarbos <lebarbos@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/25 19:17:24 by lebarbos          #+#    #+#             */
-/*   Updated: 2023/04/26 12:56:16 by lebarbos         ###   ########.fr       */
+/*   Updated: 2023/05/01 19:28:53 by lebarbos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/*	DEF: Outputs the integer ’n’ to the given file descriptor.
-**	RETURN VALUE: None.
+/*	
+DEF: Outputs the integer ’n’ to the given file descriptor.
+RETURN VALUE: None.
 */
 
 #include "libft.h"

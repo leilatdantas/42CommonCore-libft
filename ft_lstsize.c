@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstsize.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lebarbos <lebarbos@student.42porto.com     +#+  +:+       +#+        */
+/*   By: lebarbos <lebarbos@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/28 10:35:16 by lebarbos          #+#    #+#             */
-/*   Updated: 2023/04/28 10:43:19 by lebarbos         ###   ########.fr       */
+/*   Updated: 2023/05/01 16:47:00 by lebarbos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 /*
-**  DEF: Counts the number of nodes in a list.
-**  RETURN VALUE: The length of the list. 
+DEF: Counts the number of nodes in a list.
+RETURN VALUE: The length of the list. 
 */
 
 #include "libft.h"

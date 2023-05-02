@@ -3,16 +3,17 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lebarbos <lebarbos@student.42porto.com     +#+  +:+       +#+        */
+/*   By: lebarbos <lebarbos@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/22 15:07:29 by lebarbos          #+#    #+#             */
-/*   Updated: 2023/04/26 11:38:48 by lebarbos         ###   ########.fr       */
+/*   Updated: 2023/05/01 21:15:45 by lebarbos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/*	DEF: Allocates (with malloc) and returns a copy of s1 with the characters
-**	specified in 'set' removed from the beginning and the end of the string.
-**	RETURN VALUE: The trimmed string or NULL, if the allocation fails.
+/*	
+DEF: Allocates (with malloc) and returns a copy of s1 with the characters
+specified in 'set' removed from the beginning and the end of the string.
+RETURN VALUE: The trimmed string or NULL, if the allocation fails.
 */
 
 #include "libft.h"

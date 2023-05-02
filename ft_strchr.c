@@ -3,18 +3,19 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lebarbos <lebarbos@student.42porto.com     +#+  +:+       +#+        */
+/*   By: lebarbos <lebarbos@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/13 15:49:36 by lebarbos          #+#    #+#             */
-/*   Updated: 2023/04/26 10:14:31 by lebarbos         ###   ########.fr       */
+/*   Updated: 2023/05/01 20:24:25 by lebarbos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/*	LIBRARY: <string.h>
-**	DEF: Returns a pointer to the first occurence of the character c in the 
-**	string s. 
-**	RETURN VALUE: A pointer to the matched character or NULL if the character
-**	is not found. 
+/*	
+LIBRARY: <string.h>
+DEF: Returns a pointer to the first occurence of the character c in the 
+string s. 
+RETURN VALUE: A pointer to the matched character or NULL if the character
+is not found. 
 */
 
 #include "libft.h"

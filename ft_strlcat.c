@@ -3,38 +3,39 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lebarbos <lebarbos@student.42porto.com     +#+  +:+       +#+        */
+/*   By: lebarbos <lebarbos@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/19 12:56:01 by lebarbos          #+#    #+#             */
-/*   Updated: 2023/04/19 15:22:26 by lebarbos         ###   ########.fr       */
+/*   Updated: 2023/05/01 21:12:05 by lebarbos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/*  LIBRARY: <string.h>
-**  DEF: Appends the NUL-terminated string src to the end of dst. It will append
-**  at most size - strlen(dst) - 1 bytes, NUL-terminating the result.
-**  RETURN VALUE: The initial length of dst plus the length of src.
+/*  
+LIBRARY: <string.h>
+DEF: Appends the NUL-terminated string src to the end of dst. It will append at 
+most size - strlen(dst) - 1 bytes, NUL-terminating the result.
+RETURN VALUE: The initial length of dst plus the length of src.
 */
 
 #include "libft.h"
 
 size_t	ft_strlcat(char *dst, const char *src, size_t size)
 {
-	size_t	dstlen;
-	size_t	srclen;
+	size_t	i;
+	size_t	j;
 
-	dstlen = 0;
-	while (dst[dstlen] != '\0' && dstlen < size)
-		dstlen++;
-	srclen = 0;
-	while (src[srclen] != '\0' && dstlen + srclen + 1 < size)
+	i = 0;
+	while (dst[i] != '\0' && i < size)
+		i++;
+	j = 0;
+	while (src[j] != '\0' && i + j + 1 < size)
 	{
-		dst[dstlen + srclen] = src[srclen];
-		srclen++;
+		dst[i + j] = src[j];
+		j++;
 	}
-	if (dstlen < size)
-		dst[dstlen + srclen] = '\0';
-	while (src[srclen] != '\0')
-		srclen++;
-	return (dstlen + srclen);
+	if (i < size)
+		dst[i + j] = '\0';
+	while (src[j] != '\0')
+		j++;
+	return (i + j);
 }

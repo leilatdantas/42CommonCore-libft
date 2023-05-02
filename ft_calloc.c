@@ -3,17 +3,18 @@
 /*                                                        :::      ::::::::   */
 /*   ft_calloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lebarbos <lebarbos@student.42porto.com     +#+  +:+       +#+        */
+/*   By: lebarbos <lebarbos@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/19 14:54:46 by lebarbos          #+#    #+#             */
-/*   Updated: 2023/04/28 15:09:09 by lebarbos         ###   ########.fr       */
+/*   Updated: 2023/05/01 16:05:42 by lebarbos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/*  LIBRARY: <stdlib.h>
-**  DEF: Allocates memory for an array of nmemb elements of size bytes each The 
-** allocated memory is filled with bytes of value zero.
-**  RETURN VALUE: A pointer to the allocated memory.
+/*  
+LIBRARY: <stdlib.h>
+DEF: Allocates memory for an array of nmemb elements of size bytes each. The 
+allocated memory is filled with bytes of value zero.
+RETURN VALUE: A pointer to the allocated memory.
 */
 
 #include "libft.h"

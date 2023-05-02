@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: lebarbos <lebarbos@student.42porto.com     +#+  +:+       +#+         #
+#    By: lebarbos <lebarbos@student.42porto.com>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/04/27 13:31:42 by lebarbos          #+#    #+#              #
-#    Updated: 2023/04/28 12:42:58 by lebarbos         ###   ########.fr        #
+#    Updated: 2023/05/01 21:48:34 by lebarbos         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -44,8 +44,8 @@ $(NAME):	$(OBJS)
 bonus:		$(BONUS_O)
 			$(LIB) $(NAME) $(BONUS_O)
 
-c.o.:
-			$(CC) $(FLAGS) -c $< -o $(<:.c=.o)
+%.o: %.c
+			$(CC) $(CFLAGS) -c $< -o $@
 
 clean:
 			$(RM) $(OBJS) $(BONUS_O)
@@ -55,5 +55,6 @@ fclean:		clean
 
 re:			fclean all
 
+rebonus:	fclean bonus
+
 .PHONY:		all clean fclean re
-		

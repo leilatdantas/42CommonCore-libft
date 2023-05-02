@@ -3,17 +3,18 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strncmp.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lebarbos <lebarbos@student.42porto.com     +#+  +:+       +#+        */
+/*   By: lebarbos <lebarbos@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/19 13:58:00 by lebarbos          #+#    #+#             */
-/*   Updated: 2023/04/26 12:43:51 by lebarbos         ###   ########.fr       */
+/*   Updated: 2023/05/01 21:14:55 by lebarbos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/*  LIBRARY: <string.h>
-**  DEF: Compares the first n bytes of s1 an s2.
-**  RETURN VALUE: An integer less than, equal to, or greater than zero if s1 
-**  is found. 
+/*  
+LIBRARY: <string.h>
+DEF: Compares the first n bytes of s1 an s2.
+RETURN VALUE: An integer less than, equal to, or greater than zero if s1 
+is found. 
 */
 
 #include "libft.h"

@@ -3,18 +3,18 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lebarbos <lebarbos@student.42porto.com     +#+  +:+       +#+        */
+/*   By: lebarbos <lebarbos@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/24 10:37:02 by lebarbos          #+#    #+#             */
-/*   Updated: 2023/04/26 12:56:22 by lebarbos         ###   ########.fr       */
+/*   Updated: 2023/05/01 20:01:26 by lebarbos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/*  DEF: Allocates and returns an array of strings obtained by splitting 's'
-**  using the character 'c' as a delimiter. The array must end with a NULL 
-**  pointer.
-**  RETURN VALUE: The array of new strings resulting from the split. NULL if
-**  the allocation fails.  
+/*  
+DEF: Allocates and returns an array of strings obtained by splitting 's'
+using the character 'c' as a delimiter. The array must end with a NULL pointer.
+RETURN VALUE: The array of new strings resulting from the split. NULL if
+the allocation fails.  
 */
 
 #include "libft.h"
@@ -69,7 +69,7 @@ char	**ft_split(char const *s, char c)
 	index = 0;
 	j = 0;
 	words = ft_countword(s, c);
-	array = ft_calloc((words + 1), sizeof(char *));
+	array = malloc((words + 1) * sizeof(char *));
 	if (!s || !(array))
 		return (NULL);
 	while (index < words)

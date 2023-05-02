@@ -3,17 +3,17 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstclear.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lebarbos <lebarbos@student.42porto.com     +#+  +:+       +#+        */
+/*   By: lebarbos <lebarbos@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/28 11:40:19 by lebarbos          #+#    #+#             */
-/*   Updated: 2023/04/28 16:42:56 by lebarbos         ###   ########.fr       */
+/*   Updated: 2023/05/01 16:06:59 by lebarbos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 /*
-**  DEF: Deletes and frees the given node and every successor of that node, 
-**  using the function ’del’ and free(3).
-**  RETURN VALUE: None.
+DEF: Deletes and frees the given node and every successor of that node, 
+using the function ’del’ and free(3).
+RETURN VALUE: None.
 */
 
 #include "libft.h"

@@ -3,17 +3,17 @@
 /*                                                        :::      ::::::::   */
 /*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lebarbos <lebarbos@student.42porto.com     +#+  +:+       +#+        */
+/*   By: lebarbos <lebarbos@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/12 15:39:30 by lebarbos          #+#    #+#             */
-/*   Updated: 2023/04/28 14:53:53 by lebarbos         ###   ########.fr       */
+/*   Updated: 2023/05/01 16:05:19 by lebarbos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 /*	
-**	LIBRARY: <stdlib.h>
-**	DEF: Converts the inicial portion of the string pointed to by nptr to int.
-**	RETURN VALUE: The converted value. 
+LIBRARY: <stdlib.h>
+DEF: Converts the inicial portion of the string pointed to by nptr to int.
+RETURN VALUE: The converted value. 
 */
 
 #include "libft.h" 

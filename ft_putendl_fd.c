@@ -6,13 +6,13 @@
 /*   By: lebarbos <lebarbos@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/25 18:58:08 by lebarbos          #+#    #+#             */
-/*   Updated: 2023/04/27 10:30:04 by lebarbos         ###   ########.fr       */
+/*   Updated: 2023/05/01 19:28:31 by lebarbos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/*  DEF: Outputs the string ’s’ to the given file descriptor followed by a 
-**	newline.
-**	RETURN VALUE: None.
+/* 
+DEF: Outputs the string ’s’ to the given file descriptor followed by a newline.
+RETURN VALUE: None.
 */
 
 #include "libft.h"

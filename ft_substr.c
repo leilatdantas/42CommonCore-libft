@@ -3,16 +3,17 @@
 /*                                                        :::      ::::::::   */
 /*   ft_substr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lebarbos <lebarbos@student.42porto.com     +#+  +:+       +#+        */
+/*   By: lebarbos <lebarbos@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/22 11:20:48 by lebarbos          #+#    #+#             */
-/*   Updated: 2023/04/26 11:01:32 by lebarbos         ###   ########.fr       */
+/*   Updated: 2023/05/01 21:15:52 by lebarbos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/*	DEF: Allocates (with malloc) and returns a substring from string 's'. The 
-**	substring begins at index 'start' and is of maximum size 'len'.
-**	RETURN VALUE: The substring. NULL if the allocation fails. 
+/*	
+DEF: Allocates (with malloc) and returns a substring from string 's'. The 
+substring begins at index 'start' and is of maximum size 'len'.
+RETURN VALUE: The substring. NULL if the allocation fails. 
 */
 
 #include "libft.h"
